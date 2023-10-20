@@ -23,14 +23,17 @@
  */
 function analyzeColor(color) {
 if (color === 'blue') {
-    return "blue is the ocean";
+    return "blue is the color of the sky";
 }
 else if (color === 'red')
-{ return "red is pretty";
+{ return "strawberries are red";
+    }
+else if (color === "cyan"){
+        return "i don't know anything about cyan"
     }
 else {
-        return "i don't know anything about " + color;
-    }
+    return "i dont know anything about that color"
+}
 }
 
 console.log(analyzeColor('blue'));
@@ -58,10 +61,10 @@ console.log(analyzeColor(randomColor));
  */
 switch(randomColor){
     case "blue":
-      alert("blue is the ocean");
+      alert("blue is the the color of the sky");
     break;
     case "red":
-        alert("red is pretty");
+        alert("strawberries are red");
     break;
         default:
             alert(" I don't know anything about " + randomColor);
@@ -101,11 +104,11 @@ alert(analyzeColor(userColor));
      if(luckyNumber === 0) {
     return `sorry no discount your total is \$${totalAmount}`
 } else if(luckyNumber === 1) {
-    return `you get %10 discount your total is \$${(totalAmount * .90).toFixed(2)}`;
+    return `you get %10 discount your total is \$${(totalAmount * .10).toFixed(2)}`;
 } else if(luckyNumber === 2){
-    return `you get %25 discount your total is \$${(totalAmount * .75).toFixed(2)}`;
+    return `you get %25 discount your total is \$${(totalAmount * .25).toFixed(2)}`;
 } else if(luckyNumber === 3){
-    return `you get %35 discount your total is \$${(totalAmount * .65).toFixed(2)}`;
+    return `you get %35 discount your total is \$${(totalAmount * .35).toFixed(2)}`;
 } else if(luckyNumber === 4){
     return `you get %50 discount your total is \$${(totalAmount * .50).toFixed(2)}`;
 } else if(luckyNumber === 5) {
@@ -123,16 +126,13 @@ console.log(calculateTotal(5,100));
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-//  Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
+ Generate a random number between 0 and 6
+const luckyNumber = Math.floor(Math.random() * 6);
 
-let totalBill = parseFloat(prompt `please enter your total bill`:)){
-    calculateTotal(luckyNumber, totalBill);
-}
-alert (`Your lucky number is ${luckyNumber}. Your total \$$(totalBill`) + calculateTotal(luckyNumber,totalBill))
-}
-return total
-}
+ let customerTotal =parseFloat("what is your total"))
+alert("Your lucky number is: " + luckyNumber)
+alert("your total before discount is " + customerTotal )
+alert("your price after the disocunt is" + calculateTotal(luckyNumber,customerTotal));
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -151,5 +151,13 @@ return total
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let enterNumber =confirm("would you like to enter a number?");
-if(enterNumber === true); =prompt (pick a number)
+function numberFacts(){
+    let decision=confirm("would you like to enter a number?")
+if(decision === true){
+let userNumber =prompt ("what number would you like rto enter?");
+if (userNumber > 0 && userNumber % 2 === 0) {
+    let numHundred = parseFloat(userNumber) + 100;
+
+}
+}
+}
