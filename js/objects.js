@@ -49,26 +49,38 @@ console.log(person.sayHello());
 
 
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    const shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    for(let shopper of shoppers) {
+        if(shopper.amount > 200) {
+            console.log(`Congrats, ${shopper.name}. You qualify for 12% discount. and therefore your original $${shopper.amount.toFixed(2)} bill is now $${shopper.amount * .88.toFixed(2)}.');
+        } else {
+        console.log('Sorry, ${shopper.name}. You do not qualify for the discount. Your final total is $${shopper.amount.toFixed(2)}')
+        
+        }
+};
+    
+
+
+    //
+    // /** TODO:
+    //  * Create an array of objects that represent books and store it in a
+    //  * variable named `books Each object should have a title and an author
+    //  * property. The author property should be an object with properties
+    //  * `firstName` and `lastName`. Be creative and add at least 5 books to the
+    //  * array
+    //  *
+    //  * Example:
+    //  * > console.log(books[0].title) // "The Salmon of Doubt"
+    //  * > console.log(books[0].author.firstName) // "Douglas"
+    //  * > console.log(books[0].author.lastName) // "Adams"
+    //  */
 
 
 
-    /** TODO:
-     * Create an array of objects that represent books and store it in a
-     * variable named `books`. Each object should have a title and an author
-     * property. The author property should be an object with properties
-     * `firstName` and `lastName`. Be creative and add at least 5 books to the
-     * array
-     *
-     * Example:
-     * > console.log(books[0].title) // "The Salmon of Doubt"
-     * > console.log(books[0].author.firstName) // "Douglas"
-     * > console.log(books[0].author.lastName) // "Adams"
-     */
 
     /**
      * TODO:
@@ -94,6 +106,12 @@ console.log(person.sayHello());
      *      ---
      *      ...
      */
+function showBookInfo(book) {
+    return `Title: ${book.tite}\nAuthor: ${book.author.firstName} ${book.author.lastname};`
+    }
+    for (let i = 0; i < books.length; i++) {
+        console.log(`Book # ${i + 1}\n${showBookInfo(books[i])}\n---`);
+    }
 
     /**
      * Bonus:
