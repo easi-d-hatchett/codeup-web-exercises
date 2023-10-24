@@ -1,18 +1,19 @@
- "use strict";
+(function(){
+    "use strict";
 
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-const names = ["Mike, Josh, Max, Toni"];
+const names = ["Mike", "Josh", "Max", "Toni"];
 console.log(names);
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-const  name = ["mike","josh", "max", "toni"];
+
 console.log ("the number of elements in the names array is:" + names.length);
     /**
      * TODO:
@@ -58,6 +59,7 @@ console.log ("the number of elements in the names array is:" + names.length);
  console.log(numbers[0]);
  console.log(numbers[1]);
  console.log(numbers[4]);
+})();
 
 
 

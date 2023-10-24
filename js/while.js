@@ -1,4 +1,5 @@
-"use strict"
+(function(){
+    "use strict";
 let i = 2;
 while (i <= 65536){
     console.log(i);
@@ -21,5 +22,6 @@ do {
         console.log(`Cannont sell you ${x} cones i only have ${allCones}`)
     }
 }while (allCones >= 0);
+})();
 
 

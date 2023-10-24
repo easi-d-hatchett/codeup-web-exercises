@@ -1,4 +1,5 @@
-"use strict";
+(function(){
+    "use strict";
 function showMultiplicationTable(inputNum) {
     for (let i = 1; i <= 10; i++) {
         console.log(`${inputNum} x ${i} = ${inputNum * i}`);
@@ -22,3 +23,4 @@ for (let i = 1; i <= 9; i++) {
 for (let i = 100; i >= 1; i -= 5) {
     console.log(i);
 }
+})();
