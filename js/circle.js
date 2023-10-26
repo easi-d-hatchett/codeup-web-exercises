@@ -4,12 +4,13 @@
     // create a circle object
     var circle = {
         radius: 3,
-var circle = new Circle(100, 100, 3);
+
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
+            return Math.PI * this.radius ** 2;
 
-            return; // TODO: return the proper value
+            // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
