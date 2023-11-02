@@ -65,19 +65,7 @@ console.log(person.sayHello());
     
 
 
-    //
-    // /** TODO:
-    //  * Create an array of objects that represent books and store it in a
-    //  * variable named `books Each object should have a title and an author
-    //  * property. The author property should be an object with properties
-    //  * `firstName` and `lastName`. Be creative and add at least 5 books to the
-    //  * array
-    //  *
-    //  * Example:
-    //  * > console.log(books[0].title) // "The Salmon of Doubt"
-    //  * > console.log(books[0].author.firstName) // "Douglas"
-    //  * > console.log(books[0].author.lastName) // "Adams"
-    //  */
+   
 
 
 
@@ -107,7 +95,7 @@ console.log(person.sayHello());
      *      ...
      */
 function showBookInfo(book) {
-    return `Title: ${book.tite}\nAuthor: ${book.author.firstName} ${book.author.lastname};`
+    return `Title:${book.tite}\nAuthor: ${book.author.firstName} ${book.author.lastname};`
     }
     for (let i = 0; i < books.length; i++) {
         console.log(`Book # ${i + 1}\n${showBookInfo(books[i])}\n---`);
