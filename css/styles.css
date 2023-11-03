@@ -12,6 +12,7 @@ body {
     width: calc(100% - 40px);
     max-width: 530px;
     box-shadow: 0px 0px 104px -40px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .container.login h1 {
@@ -27,7 +28,7 @@ input {
     font-size: 15px;
 }
 
-input:placeholder {
+input ::placeholder {
     color: #ABAFB3;
 }
 
@@ -73,6 +74,36 @@ button.btn.btn-login {
     min-width: 250px;
 }
 
+.page-wrapper>img {
+    position: absolute;
+}
+img[src="images/footer-wave-bottom.svg"],
+img[src="images/footer-wave-top.svg"] {
+    bottom: 0;
+    width: 100%;
+}
+img[src="images/wavy-lines-1.svg"] {
+    left: 1em;
+    top: 10em;
+}
 
-
-
+img[src="images/wavy-lines-2.svg"] {
+    right: 1em;
+    top: 18em;
+}
+img[src="images/dots-1.svg"] {
+    top: 50%;
+    left: 5em;
+}
+img[src="images/dots-2.svg"] {
+    top: 2em;
+    right: 6em;
+}
+.cancel-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+}
