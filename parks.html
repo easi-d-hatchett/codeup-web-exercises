@@ -77,13 +77,28 @@
 
 <script>
     "use strict"
-
+// create a button that when clicked makes the last li in each ul have a yellow background
 document.querySelector("#last-fact-yellow").addEventListener("click", (e)=> {
-    for (let ul of document.querySelectorAll("ul")) {
-        ul.children[ul.children.length-1].style.backgroundColor="yellow"
-    }
-})
+  const uls =document.querySelectorAll('ul');
+  for(const ul of uls) {
+  ul.lastElementChild.style.backgroundColor="yellow";
+  }
+});
 
+    // when any h3 is clicked, the lis underneath it should have a fontWeight of "bold"
+    const h3s=document.querySelectorAll("h3");
+    for (const h3 of h3s) {
+        h3.addEventListener("click", (e)=> {
+            e.currentTarget.nextElementSibling.style.fontWeight = "bold";
+        });
+    }
+// when any list item clicked, the first li of that list item's parent ul should have a font color of blue.
+    const lis =document.querySelectorAll("li");
+    for (const li of lis) {
+        li.addEventListener("click", (e) => {
+            e.currentTarget.parentElement.firstElementChild.style.color = 'blue';
+        });
+    }
 
 </script>
 </body>
