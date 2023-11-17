@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
-    <link rel="stylesheet" href="css"
+
 </head>
 <body>
 
@@ -78,6 +78,33 @@
         button4.addEventListener("click", () => {
             subParagraphs[0].innerHTML = "mission Accomplished!";
         });
+
+        const h1s = document.querySelectorAll("h1");
+        for (let h1 of h1s) {
+            h1.addEventListener("click", (e) => {
+                e.target.style.backgroundColor = "#efo";
+            });
+
+        }
+
+        const ps = document.querySelectorAll("p");
+        for (let p of ps) {
+            p.addEventListener("dblclick", (e) => {
+                e.target.style.fontSize = "18px";
+            })
+        }
+
+        for (let li of listItems) {
+            let origColor = li.style.color;
+            li.addEventListener("mouseenter" , (e) => {
+                e.target.style.color = "purple";
+            });
+
+            li.addEventListener("mouseleave", (e) => {
+                e.target.style.color = origColor;
+            });
+        }
+
 </script>
 </body>
 </html>
