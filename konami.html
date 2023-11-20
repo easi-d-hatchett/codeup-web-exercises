@@ -36,9 +36,41 @@
 <script>
   "use strict";
 
-  document.addEventListener("keyup", event => console.log(event.key) );
+
+  let keys = {
+      37:"left",
+      38: "up",
+      39: "right",
+      40: "down",
+      65: "a",
+      66: "b"
+  };
 
   let konamiCode = ["up", "up","down","down","left","right","left","right","b","a"];
+  document.addEventListener("keydown", checkCode, false);
+
+  let keyCount = 0;
+
+  function checkCode(event) {
+      let keyPressed = keys[event.keyCode];
+      if(keyPressed === konamiCode[keyCount]) {
+          keyCount++;
+          if (keyCount === konamiCode.length) {
+              cheatCodeActivated();
+              resetKeyState();
+          }
+      } else {
+          restKeyState();
+
+      }
+  }
+  function cheatCodeActivated() {
+      alert("cheat code activated!!!");
+
+  }
+  function resetKeyState() {
+      keyCount = 0;
+  }
 </script>
 </body>
 </html>
