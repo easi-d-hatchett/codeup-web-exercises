@@ -11,13 +11,13 @@
         const userInput = input.value;
         input.value = "";
 
-        const Li = document.createElement("li");
+        const li = document.createElement("li");
         const p = document.createElement("p");
         const doneBtn = document.createElement("button");
 
         p.classList.add("m-0");
         doneBtn.classList.add("btn", "btn-danger");
-        li.classList.add("to-do-item", "list-group-item", "d-flex", "justify-conten-between", "align-items-center");
+        li.classList.add("to-do-item", "list-group-item", "d-flex", "justify-content-between", "align-items-center");
 
         doneBtn.innerText = "Done";
         p.innerText = userInput;
