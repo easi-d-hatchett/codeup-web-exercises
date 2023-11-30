@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map BOX</title>
+</head>
+<script src="js/mapbox_maps_api.js"></script>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id='map' style='width: 80vw; height: 50vh; margin: auto'></div>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+  mapboxgl.accessToken = MB_KEY;
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    center: [-98.4946, 29.4252], // starting position [lng, lat]
+    zoom: 4, // starting zoom
+  });
+
+  map.addControl(new mapboxgl.NavigationControl());
+  geocode("240 Peachtree St, Atlanta, GA 30303", MB_KEY).then(coords => {
+      const marker = new mapboxgl.Marker()
+          .setLngLat(coords)
+          .addTo(map);
+  });
+ const favfoodPopup = new mapboxgl.Popup()
+     .setHTML("<p> Welcome to the AYY!</p>");
+
+ marker.setPopup =new (favfoodPopup);
+  });
+
+geocode("1 Amb Dr Nw, Atlanta, GA 30313", MB_KEY).then(coords => {
+    console.log(coords);
+    let popup = new mapboxgl.Popup()
+        .setLngLat(coords)
+        .setHTML("<p>Peace up A-town Down!</p>")
+        .addTo(map);
+});
+
+
+
+</script>
+
+</body>
+</html>
