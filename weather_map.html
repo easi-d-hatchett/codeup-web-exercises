@@ -3,50 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>weather map</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 <body>
 <div id='map' style='width: 100%; height: 700px; margin: auto'></div>
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
-<script src=
+<script src= "weather_map.js"></script>
+
 <script>
-    function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(`${baseUrl}${endPoint}${encodeURIComponent(search)}.json?access_token=${token}`)
-            .then( res => res.json() )
-            // to get all the data from the request, comment out the following three lines...
-            .then( data => data.features[0].center);
-    }
-
-
-
-
-
-    function convertTime() {
-
-    }
-
-    const lat = 29.4260;
-    const lon = -98.4861;
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-
-            for (let i = 0; i < data.list.length; i += 8) {
-                console.log(data.list[i].main.pressure);
-            }
-                1003 for pressure
-            })
-        .catch((e) => {
-                console.error(e);
-            });
-
-
-
-
 
 
 
