@@ -22,11 +22,7 @@ document.getElementById('zoom-level').addEventListener('change', function (event
     map.setZoom(zoomLevel);
 });
 
-// Event listener for the "Search" button
-document.getElementById('searchButton').addEventListener('click', function () {
-    const location = document.getElementById('search').value;
-    geocodeLocation(location);
-});
+
 
 
 function geocodeLocation(location){
@@ -45,6 +41,9 @@ function geocodeLocation(location){
 // Fetch weather data from OpenWeatherMap API
 const lat = 33.7488;
 const lon = -84.387;
+
+
+
 
 
 fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
