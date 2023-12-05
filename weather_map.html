@@ -15,14 +15,15 @@
     <h1><em>Weather Map</em></h1>
 </header>
 
-<!-- Map div -->
-<div id='map' style='width: 100vw; height: 60vh; margin: auto'></div>
 
-<!-- Weather info as a card -->
+<!-- Map div -->
+<div id='map' style='width: 100vw; height: 73vh; margin: auto'></div>
+
+<!-- Weather info -->
 <div class="parentWeatherDiv">
     <div id="weatherInfoCard">
         <h2>Weather Information</h2>
-        <p id="weatherInfo"></p>
+
     </div>
 </div>
 
@@ -33,6 +34,7 @@
     <button id="searchButton">Search</button>
 </div>
 
+
 <!-- Zoom level div -->
 <div>
     <label for="zoom-level">Zoom Level:</label>
@@ -42,6 +44,10 @@
         <option value="20">20</option>
     </select>
 </div>
+
+<div id="weatherInfo"></div>
+
+
 
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
