@@ -1,4 +1,4 @@
-import genRandomNum from "./number-utilis.js";
+import genRandomNum from "./number-utils.js";
 
 const greetings = [
     "Hello",
